@@ -1,0 +1,95 @@
+# 3 Components Proceduraux Houdini : Chapelle Louisiana Bayou (Toiture et Fenetres)
+
+Date : 2026-09-11
+Auteur : ZenRay (@zenray.st)
+Sujet : Houdini Procedural Church / 3 Components (Toiture, Fenetre Gothique A, Fenetre Pignon B)
+Format media : 3 Reels Master Retina (3456x2234 a 60 fps) + Format 4:5 Instagram Feed avec bande son dediee
+Fichiers video :
+1. `reel-01-roof.mov` (Musique : The Golden Land, Evan Call)
+2. `reel-02-windowa.mov` (Musique : Eikonoklasm)
+3. `reel-03-windowb.mov` (Musique : Clair Obscur Expedition 33, Monoco's Station)
+
+---
+
+## Texte du post (Style Damien Richard 3D Tech Artist)
+
+### Version Francaise
+
+Pendant plusieurs semaines, j'ai bosse sur la modelisation procedurale d'une chapelle bayou sous Houdini pour un rendu sur Unreal Engine. Une question qui parait simple en apparence, mais seulement en apparence, car mon but etait de creer un hero asset reussi et parametrable.
+
+Pour construire cet asset et son design, j'ai d'abord concu trois briques separees :
+- La toiture en bardeaux de cedre et faitage (Component_Roof)
+- La fenetre gothique avec volets et croisillons (Component_WindowA)
+- La fenetre pignon a arc brise et croix (Component_WindowB)
+
+Mais voila le constat lucide : en voulant decouper mon eglise en 3 composants HDA completement independants, j'ai fait une erreur de design d'asset. C'etait seduisant sur le papier, mais en pratique c'est contre-productif : quand je veux modifier la pente du toit ou l'echelle d'une baie, les fenetres et la charpente ne sont pas liees. Je dois reporter chaque cote a la main sous peine de voir des ouvertures flotter ou briser l'alignement de la facade.
+
+Trois composants proceduraux solides dans leur coin ne font pas un hero asset fonctionnel tant qu'ils ne partagent pas un cerveau commun. Prochaine etape : interconnecter ces 3 briques dans un master hero asset unifie.
+
+Merci d'avoir pris le temps de regarder et de lire ᕙ(`▿´)ᕗ
+
+### English Version
+
+For several weeks, I've been working on the procedural modeling of a bayou church in Houdini for Unreal Engine rendering. A question that seems simple on the surface, but only on the surface, because my goal was to create a successful, parameter-driven hero asset.
+
+To build this asset and its design, I first designed three separate modules:
+- The cedar shake roof and cresting ridge (Component_Roof)
+- The Gothic shuttered window with muntins (Component_WindowA)
+- The gable pointed arch window with cross (Component_WindowB)
+
+Here is the honest takeaway though: by wanting to break down my church into 3 completely independent HDA components, I made an asset design mistake. It was appealing on paper, but in practice it is counter-productive: when I want to change the roof pitch or global scale, the windows and the roof framing are not linked. I have to manually copy every dimension by hand, otherwise openings end up misaligned or floating in thin air.
+
+Three solid procedural components in their own corner do not make a functional hero asset until they share a common brain. Next step: interconnecting these 3 modules into a unified master hero asset.
+
+Thanks for taking the time to watch and read ᕙ(`▿´)ᕗ
+
+---
+
+## Decoupage mot a mot des 8 repliques (Sous-titres 15 secondes)
+
+1. [0.0s a 1.0s] (1.0s) :
+   - L1 (Jaune) : Procedural modeling of a bayou church
+   - L2 (Blanc) : In Houdini for Unreal Engine rendering
+2. [1.0s a 3.0s] (2.0s) :
+   - L1 (Jaune) : Goal was to create a successful,
+   - L2 (Blanc) : Parameter-driven hero asset.
+3. [3.0s a 5.0s] (2.0s) :
+   - L1 (Jaune) : I first designed three separate modules:
+   - L2 (Blanc) : Roof, window A, and window B.
+4. [5.0s a 7.0s] (2.0s) :
+   - L1 (Jaune) : Here is the honest takeaway though:
+   - L2 (Blanc) : I made an asset design mistake.
+5. [7.0s a 9.0s] (2.0s) :
+   - L1 (Jaune) : 3 completely independent HDA components,
+   - L2 (Blanc) : It is counter-productive in practice.
+6. [9.0s a 11.0s] (2.0s) :
+   - L1 (Jaune) : When adjusting the global scale,
+   - L2 (Blanc) : Connections break and alignments fail.
+7. [11.0s a 13.0s] (2.0s) :
+   - L1 (Jaune) : Best approach is one parent HDA
+   - L2 (Blanc) : Driving modular sub-components inside.
+8. [13.0s a 15.0s] (2.0s) :
+   - L1 (Jaune) : Clean procedural architecture
+   - L2 (Blanc) : Solves scale and assembly issues.
+
+---
+
+## Parametres exposes et dynamiques testees en direct (60 fps)
+
+1. Component_Roof (Toiture) :
+   - Building Width : 4.0 a 5.8 m
+   - Gable Peak Height : 2.4 a 3.6 m
+   - Shingle Random Rotation : 5.0 a 25.0 deg
+   - Shingle Slope Tilt : 15.0 a 35.0 deg
+
+2. Component_WindowA (Fenetre Gothique avec volets) :
+   - Window Width : 0.88 a 1.35 m
+   - Window Height : 1.85 a 2.45 m
+   - Louver Angle : 22.0 a 65.0 deg
+   - Frame Depth : 0.16 a 0.28 m
+
+3. Component_WindowB (Fenetre Pignon a croix) :
+   - Window Width : 0.90 a 1.40 m
+   - Window Height : 1.85 a 2.45 m
+   - Louver Angle : 25.0 a 65.0 deg
+   - Inner Frame Depth : 0.035 a 0.09 m

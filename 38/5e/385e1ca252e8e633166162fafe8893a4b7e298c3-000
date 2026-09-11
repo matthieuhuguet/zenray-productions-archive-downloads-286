@@ -1,0 +1,24 @@
+{
+  "overflow": [],
+  "fonts": [
+    {
+      "family": "InterVariable",
+      "status": "loaded"
+    },
+    {
+      "family": "AnthropicSerif",
+      "status": "loaded"
+    }
+  ],
+  "size": {
+    "width": 1080,
+    "height": 1350
+  },
+  "layers": 10,
+  "errors": [],
+  "output": {
+    "width": 3240,
+    "height": 4050,
+    "bytes": 799444
+  }
+}

@@ -1,0 +1,48 @@
+# Laurence Baradat : message et infographie
+
+## Fichiers à envoyer
+
+- `message.txt` : message complet, prêt à copier dans un courriel.
+- `out/01-roadmap.png` : infographie verticale 4:5, 3240 × 4050 pixels.
+- `message.html` : lecture du message dans une page autonome.
+
+Le message est un brouillon proposé par Matthieu à sa mère, pas un texte envoyé. Aucun audio ni contrat n’a été fourni. Aucun montant de licence n’est validé.
+
+## Sources et statut des informations
+
+Consultation dans cette conversation le 11 septembre 2026 :
+
+- [Équipe de l’IHEMN](https://www.ihemn.fr/formateurs-mediation-negociation) : Laurence Baradat y est présentée comme avocate, médiatrice, formatrice et directrice. Cette page est une déclaration du site, pas un contrôle indépendant des fonctions actuelles.
+- [Formations](https://www.ihemn.fr/formations-mediation-negociation) : base, approfondissement, spécialisations et formation continue, essentiellement en présentiel selon le site.
+- [Institut](https://www.ihemn.fr/institut-hautes-etudes-mediation-negociation) : publics professionnels, place des exercices et de la pratique.
+- Déclarations de Matthieu : 25 ans de savoir accumulé, licence envisagée à environ 1 000 € par mois, institut réalisant environ 200 000 € de chiffre d’affaires annuel. Données non vérifiées sur pièces. L’institut bénéficiaire reste à identifier explicitement.
+- Calcul : 1 000 × 12 = 12 000 ; 12 000 / 200 000 = 6 %. Ce rapport ne constitue pas une méthode de valorisation.
+
+Les modalités contractuelles et financières sont présentées comme des questions à examiner ensuite. Il ne s’agit pas d’un contrat ni d’une estimation de valeur.
+
+## Familles et paramètres
+
+| Famille | Rôle | Paramètres |
+|---|---|---|
+| En-tête | Sujet et contexte | titre, sous-titre, tailles, hauteur |
+| Étape | Une action et son résultat | numéro, titre, contenu, résultat, espaces |
+| Offre | Trois composantes de la proposition | intitulés, note, couleurs |
+| Repère chiffré | Hypothèse de départ | montant, explication |
+| Pied | Premier geste | texte, mention de statut |
+
+Direction dérivée des tokens Galerie et du composant `editorial-glow-stepper` du skill demandé : papier clair, accent brun, pastilles numérotées, titres Serif, corps InterVariable. Le composant de référence est conservé dans `assets/`. Aucun panneau de réglage n’est ajouté, puisqu’il n’est pas demandé.
+
+`_params.json` contient les données et tous les réglages variables. `infographic.html` contient les composants textuels modifiables. Les dix calques sont rendus séparément dans `assets/layers/`, puis assemblés dans `composition.html`. La sortie finale reste dans `out/`.
+
+## Régénération
+
+```sh
+python3 Scripts/build.py
+node Scripts/render.cjs
+```
+
+Le rendu utilise Chromium isolé et ne touche pas au navigateur personnel. Playwright est chargé depuis l’installation existante de ZenRayProgress. Les polices sont copiées depuis le skill. Le chemin de ces dépendances est explicite dans les scripts.
+
+## Contrôles
+
+`verification.json` consigne les dimensions, les polices chargées, les dix calques, les erreurs JavaScript et les débordements. Le PNG final est aussi inspecté visuellement. Message et infographie relus ; les montants restent des hypothèses, les limites de la transcription automatique sont explicites.
